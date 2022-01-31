@@ -45,5 +45,7 @@ public class Main {
         } else {
             System.out.println("Нужно идти в магазин.");
         }
+
+        scanner.close();
     }
 }
