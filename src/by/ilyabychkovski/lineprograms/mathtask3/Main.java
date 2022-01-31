@@ -31,17 +31,23 @@ public class Main {
         System.out.println("Введите ширину плитки в см:");
         int widthTiles = scanner.nextInt();
 
-        int result2 = numberOfTiles * drawerTiles;
-        int lengthRoomTiles = lengthRoom / lengthTiles;
-        int widthRoomTiles = widthRoom / widthTiles;
-        int result = lengthRoomTiles * widthRoomTiles;
-        int result3 = result2 - result;
-        System.out.println("В наличие плиток:" + result2 + ", всего нужно:" + result );
+        int roomSquare = lengthRoom * widthRoom;
+        int tilesSquare = lengthTiles * widthTiles;
+        int allTilesSquare = numberOfTiles * drawerTiles * tilesSquare;
+        boolean doWeNeedMoreTiles = roomSquare > allTilesSquare;
+
+//        int finalTilesAmount = numberOfTiles * drawerTiles;
+//        int lengthRoomTiles = lengthRoom / lengthTiles;
+//        int widthRoomTiles = widthRoom / widthTiles;
+//        int roomsSquare = lengthRoomTiles * widthRoomTiles;
+//        int result3 = finalTilesAmount - roomsSquare;
+//        System.out.println("В наличие плиток:" + finalTilesAmount + ", всего нужно:" + roomsSquare );
 
 
-        boolean finalResult = result <= result2;
-        if (finalResult) {
-            System.out.println("В магазин идти не нужно." + " Осталось плиток: " + result3);
+//        boolean finalResult = roomsSquare <= finalTilesAmount;
+
+        if (!doWeNeedMoreTiles) {
+            System.out.println("В магазин идти не нужно.");
         } else {
             System.out.println("Нужно идти в магазин.");
         }
