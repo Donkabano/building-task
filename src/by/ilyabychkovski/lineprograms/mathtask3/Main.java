@@ -14,10 +14,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите длинну комнаты в см:");
-        int sizeLengthRoom = scanner.nextInt();
+        int lengthRoom = scanner.nextInt();
 
         System.out.println("Введите ширину комнаты в см:");
-        int sizeWidthRoom = scanner.nextInt();
+        int widthRoom = scanner.nextInt();
 
         System.out.println("Введите колличество ящиков с плиткой:");
         int drawerTiles = scanner.nextInt();
@@ -26,14 +26,14 @@ public class Main {
         int numberOfTiles = scanner.nextInt();
 
         System.out.println("Введите длинну плитки в см:");
-        int sizeLengthTiles = scanner.nextInt();
+        int lengthTiles = scanner.nextInt();
 
         System.out.println("Введите ширину плитки в см:");
-        int sizeWidthTiles = scanner.nextInt();
+        int widthTiles = scanner.nextInt();
 
         int result2 = numberOfTiles * drawerTiles;
-        int lengthRoomTiles = sizeLengthRoom / sizeLengthTiles;
-        int widthRoomTiles = sizeWidthRoom / sizeWidthTiles;
+        int lengthRoomTiles = lengthRoom / lengthTiles;
+        int widthRoomTiles = widthRoom / widthTiles;
         int result = lengthRoomTiles * widthRoomTiles;
         int result3 = result2 - result;
         System.out.println("В наличие плиток:" + result2 + ", всего нужно:" + result );
